@@ -2,7 +2,8 @@
 // config files can be ConfigSlurper scripts, Java properties files, or classes
 // in the classpath in ConfigSlurper format
 
-// grails.config.locations = [ "classpath:${appName}-config.properties",
+grails.config.locations = [ "classpath:${appName}-config.groovy"]
+// grails.config.locations = [ "classpath:${appName}-config.properties"
 //                             "classpath:${appName}-config.groovy",
 //                             "file:${userHome}/.grails/${appName}-config.properties",
 //                             "file:${userHome}/.grails/${appName}-config.groovy"]
@@ -88,4 +89,12 @@ log4j = {
            'org.springframework',
            'org.hibernate',
            'net.sf.ehcache.hibernate'
+}
+
+//For more information about configuration go to: https://bitbucket.org/tednaleid/grails-jasypt/wiki/Home
+jasypt {
+    algorithm = "PBEWITHSHA256AND128BITAES-CBC-BC"
+    providerName = "BC"
+    password = "example"
+    keyObtentionIterations = 1000
 }
