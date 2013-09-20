@@ -90,3 +90,11 @@ log4j = {
            'org.hibernate',
            'net.sf.ehcache.hibernate'
 }
+
+//For more information about configuration go to: https://bitbucket.org/tednaleid/grails-jasypt/wiki/Home
+jasypt {
+    algorithm = "PBEWITHSHA256AND128BITAES-CBC-BC"
+    providerName = "BC"
+    password = "example"
+    keyObtentionIterations = 1000
+}
