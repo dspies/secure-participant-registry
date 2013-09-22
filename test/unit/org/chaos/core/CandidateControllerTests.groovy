@@ -1,13 +1,10 @@
 package org.chaos.core
 
-
-
-import org.junit.*
 import grails.test.mixin.*
 
-@TestFor(ParticipantController)
-@Mock(Participant)
-class ParticipantControllerTests {
+@TestFor(CandidateController)
+@Mock(Candidate)
+class CandidateControllerTests {
 
     def populateValidParams(params) {
         assert params != null
@@ -49,7 +46,7 @@ class ParticipantControllerTests {
 
         assert response.redirectedUrl == '/participant/show/1'
         assert controller.flash.message != null
-        assert Participant.count() == 1
+        assert Candidate.count() == 1
     }
 
     void testShow() {
@@ -59,7 +56,7 @@ class ParticipantControllerTests {
         assert response.redirectedUrl == '/participant/list'
 
         populateValidParams(params)
-        def participant = new Participant(params)
+        def participant = new Candidate(params)
 
         assert participant.save() != null
 
@@ -77,7 +74,7 @@ class ParticipantControllerTests {
         assert response.redirectedUrl == '/participant/list'
 
         populateValidParams(params)
-        def participant = new Participant(params)
+        def participant = new Candidate(params)
 
         assert participant.save() != null
 
@@ -97,7 +94,7 @@ class ParticipantControllerTests {
         response.reset()
 
         populateValidParams(params)
-        def participant = new Participant(params)
+        def participant = new Candidate(params)
 
         assert participant.save() != null
 
@@ -142,17 +139,17 @@ class ParticipantControllerTests {
         response.reset()
 
         populateValidParams(params)
-        def participant = new Participant(params)
+        def participant = new Candidate(params)
 
         assert participant.save() != null
-        assert Participant.count() == 1
+        assert Candidate.count() == 1
 
         params.id = participant.id
 
         controller.delete()
 
-        assert Participant.count() == 0
-        assert Participant.get(participant.id) == null
+        assert Candidate.count() == 0
+        assert Candidate.get(participant.id) == null
         assert response.redirectedUrl == '/participant/list'
     }
 }

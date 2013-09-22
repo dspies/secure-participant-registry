@@ -6,17 +6,17 @@ import org.junit.Before
 /**
  * See the API for {@link grails.test.mixin.domain.DomainClassUnitTestMixin} for usage instructions
  */
-@TestFor(Participant)
-class ParticipantTests {
+@TestFor(Candidate)
+class CandidateTests {
 
-	Participant participant
+	Candidate participant
 
 	@Before
 	void setup(){
-        mockForConstraintsTests Participant
+        mockForConstraintsTests Candidate
 
         //Test for null fields
-        participant = new Participant()
+        participant = new Candidate()
 	}
 
     void testNullConstraints() {

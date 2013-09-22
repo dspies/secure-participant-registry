@@ -1,4 +1,4 @@
-<%@ page import="org.chaos.core.Participant" %>
+<%@ page import="org.chaos.core.Candidate" %>
 
 
 

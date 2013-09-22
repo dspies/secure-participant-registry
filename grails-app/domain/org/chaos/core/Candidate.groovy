@@ -4,7 +4,7 @@ import com.bloomhealthco.jasypt.GormEncryptedDateAsStringType
 import com.bloomhealthco.jasypt.GormEncryptedLongAsStringType
 import com.bloomhealthco.jasypt.GormEncryptedStringType
 
-class Participant {
+class Candidate {
 
     String firstName
     String lastName

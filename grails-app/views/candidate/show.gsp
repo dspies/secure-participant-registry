@@ -1,10 +1,10 @@
 
-<%@ page import="org.chaos.core.Participant" %>
+<%@ page import="org.chaos.core.Candidate" %>
 <!DOCTYPE html>
 <html>
 	<head>
 		<meta name="layout" content="main">
-		<g:set var="entityName" value="${message(code: 'participant.label', default: 'Participant')}" />
+		<g:set var="entityName" value="${message(code: 'participant.label', default: 'Candidate')}" />
 		<title><g:message code="default.show.label" args="[entityName]" /></title>
 	</head>
 	<body>
